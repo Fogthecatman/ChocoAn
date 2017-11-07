@@ -4,7 +4,8 @@
 public class Driver {
 
     public static void main(String args[]){
-        System.out.println("Hello Dank Memes");
+        GUIDriver gd = new GUIDriver();
+        gd.run();
     }
 
 }
