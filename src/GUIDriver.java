@@ -9,8 +9,6 @@ import java.awt.*;
  */
 public class GUIDriver extends JFrame {
 
-    private JFrame main;
-
     private Controller[] controls;
 
     public GUIDriver() {
