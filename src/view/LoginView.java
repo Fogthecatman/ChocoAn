@@ -8,7 +8,7 @@ import java.awt.*;
  */
 public class LoginView implements View {
 
-    private JPanel myPanel;
+    private JPanel panel;
     private JTextField username;
     private JPasswordField password;
     private JButton submit;
@@ -18,43 +18,43 @@ public class LoginView implements View {
     }
 
 
-    //Deals with implementing JPanel components;
+    //Implementing panel objects
     private void init() {
-        myPanel = new JPanel();
+        panel = new JPanel();
 
-        myPanel.setLayout(new GridBagLayout());
+        panel.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
-        myPanel.setSize(200,200);
+        panel.setSize(200,200);
 
 
         JLabel usernameLabel = new JLabel("Username");
         c.gridx = 0;
         c.gridy = 0;
-        myPanel.add(usernameLabel, c);
+        panel.add(usernameLabel, c);
 
         username = new JTextField(20);
         c.gridx = 1;
-        myPanel.add(username, c);
+        panel.add(username, c);
 
         JLabel passwordLabel = new JLabel("Password");
         c.gridx = 0;
         c.gridy = 1;
-        myPanel.add(passwordLabel, c);
+        panel.add(passwordLabel, c);
 
         password = new JPasswordField(20);
         c.gridx = 1;
-        myPanel.add(password, c);
+        panel.add(password, c);
 
         submit = new JButton("submit");
         c.gridx = 1;
         c.gridy = 2;
-        myPanel.add(submit, c);
+        panel.add(submit, c);
 
     }
 
 
     public JPanel getPanel() {
         System.out.println("returning panel");
-        return myPanel;
+        return panel;
     }
 }
