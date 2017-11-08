@@ -7,9 +7,10 @@ import java.awt.*;
 /**
  * Created by Jacob on 11/6/17.
  */
-public class GUIDriver extends JFrame {
+public class GUIDriver {
 
     private Controller[] controls;
+    private JFrame main;
 
     public GUIDriver() {
 
@@ -21,31 +22,34 @@ public class GUIDriver extends JFrame {
 
     //Deals with initializations of gui components
     private void init() {
-        this.setTitle("ChocoAn Application");
 
-        this.setSize(500,500);
+        main = new JFrame();
+
+        main.setTitle("ChocoAn Application");
+
+        main.setSize(500,500);
 
         //Creates JFrame in the middle of the screen
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2 - this.getSize().width/2, dim.height/2 - this.getSize().height/2);
+        main.setLocation(dim.width/2 - main.getSize().width/2, dim.height/2 - main.getSize().height/2);
 
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public void run() {
 
         //Login Step
-        populateGui(controls[0]);
+        populateView(controls[0]);
         controls[0].run();
 
         //We want pane visible when it has loaded login view
-        this.setVisible(true);
+        main.setVisible(true);
 
     }
 
     //Gets view associated with Controller and fills GUI
-    private void populateGui(Controller c) {
-        this.setContentPane(c.getView().getPanel());
+    private void populateView(Controller c) {
+        main.setContentPane(c.getView().getPanel());
 
     }
 
