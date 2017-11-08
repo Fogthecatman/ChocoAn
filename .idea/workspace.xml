@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db22fb04-009b-4ee8-898b-b76becfc3905" name="Default" comment="Separation of GUI Driver from JFrame.">
+    <list default="true" id="db22fb04-009b-4ee8-898b-b76becfc3905" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ChocoAn.iml" afterPath="$PROJECT_DIR$/ChocoAn.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -386,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510171169867</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updating names">
+      <created>1510172211003</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1510172211003</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -432,7 +438,8 @@
     <MESSAGE value="Started creation of LoginView and made skeleton LoginController class for testing." />
     <MESSAGE value="Creating controllers and views." />
     <MESSAGE value="Separation of GUI Driver from JFrame." />
-    <option name="LAST_COMMIT_MESSAGE" value="Separation of GUI Driver from JFrame." />
+    <MESSAGE value="Updating names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating names" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
