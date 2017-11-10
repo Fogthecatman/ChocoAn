@@ -2,9 +2,8 @@ package view;
 
 import javax.swing.*;
 
-public class OperatorView implements View {
+public class OperatorView extends View {
 
-    private JPanel panel;
 
     public OperatorView() {
         init();
@@ -15,8 +14,5 @@ public class OperatorView implements View {
         panel = new JPanel();
     }
 
-    public JPanel getPanel() {
-        return panel;
-    }
 
 }

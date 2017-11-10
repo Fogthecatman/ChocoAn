@@ -1,14 +1,14 @@
 package view;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 
 /**
  * Created by Jacob on 11/6/17.
  */
-public class LoginView implements View {
+public class LoginView extends View {
 
-    private JPanel panel;
     private JTextField username;
     private JPasswordField password;
     private JButton submit;
@@ -24,8 +24,6 @@ public class LoginView implements View {
 
         panel.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
-        panel.setSize(200,200);
-
 
         JLabel usernameLabel = new JLabel("Username");
         c.gridx = 0;
@@ -50,11 +48,7 @@ public class LoginView implements View {
         c.gridy = 2;
         panel.add(submit, c);
 
+        mainPanel.add(panel, BorderLayout.CENTER);
     }
 
-
-    public JPanel getPanel() {
-        System.out.println("returning panel");
-        return panel;
-    }
 }
