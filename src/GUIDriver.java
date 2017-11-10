@@ -29,6 +29,10 @@ public class GUIDriver {
     //Deals with initializations of gui components
     private void init() {
 
+        try {
+            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+        } catch (Exception e) { e.printStackTrace(); }
+
         main = new JFrame();
 
         main.setTitle("ChocoAn Application");
@@ -45,8 +49,8 @@ public class GUIDriver {
     public void run() {
 
         //Login Step
-        populateView(controls[0]);
-        controls[0].run();
+        populateView(controls[1]);
+        controls[1].run();
 
         //We want pane visible when it has loaded login view
         main.setVisible(true);
@@ -56,7 +60,6 @@ public class GUIDriver {
     //Gets view associated with Controller and fills GUI
     private void populateView(Controller c) {
         main.setContentPane(c.getView().getPanel());
-
     }
 
 }

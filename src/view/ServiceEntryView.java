@@ -60,6 +60,7 @@ public class ServiceEntryView extends View {
         c.gridy = 4;
         panel.add(submit, c);
 
+        setGuiType(1);
         mainPanel.add(panel, BorderLayout.CENTER);
     }
 

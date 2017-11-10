@@ -8,6 +8,10 @@ import java.awt.*;
  */
 public class View {
 
+    //GUI_TYPE 0 for login and button selection screen
+    //GUI_TYPE 1 for screens needing back button, or top bar
+    protected int GUI_TYPE = 0;
+
     protected JPanel mainPanel;
     private JPanel topBarPanel;
 
@@ -28,12 +32,19 @@ public class View {
 
         backBtn = new JButton("<--- Back");
         topBarPanel.add(backBtn);
-
-        mainPanel.add(topBarPanel, BorderLayout.NORTH);
-
     }
 
+    public void setGuiType(int guiType) { GUI_TYPE = guiType; }
+
     public JPanel getPanel() {
+
+        if(GUI_TYPE != 0) {
+            mainPanel.add(topBarPanel, BorderLayout.NORTH);
+        }
+        else {
+            mainPanel.remove(topBarPanel);
+        }
+
         return mainPanel;
     }
 }
