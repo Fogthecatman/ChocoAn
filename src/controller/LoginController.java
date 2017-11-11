@@ -7,7 +7,7 @@ import view.View;
 /**
  * Created by Jacob on 11/6/17.
  */
-public class LoginController extends Controller {
+public class LoginController extends ViewController {
 
     private View loginView;
 

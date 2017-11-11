@@ -4,7 +4,7 @@ import model.User;
 import view.ServiceEntryView;
 import view.View;
 
-public class ServiceEntryController extends Controller {
+public class ServiceEntryController extends ViewController {
 
     private View serviceEntry;
 
