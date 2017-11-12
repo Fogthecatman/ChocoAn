@@ -1,13 +1,15 @@
 package controller;
 
+import model.User;
 import view.ServiceEntryView;
 import view.View;
 
-public class ServiceEntryController implements Controller {
+public class ServiceEntryController extends ViewController {
 
     private View serviceEntry;
 
-    public ServiceEntryController() {
+    public ServiceEntryController(User login) {
+        super(login);
         serviceEntry = new ServiceEntryView();
     }
 
