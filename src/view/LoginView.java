@@ -47,6 +47,9 @@ public class LoginView extends View {
         c.gridx = 1;
         c.gridy = 2;
         panel.add(submit, c);
+        //@TODO: Add an action listener for submit button
+        //Validate password: Send id+pass to LoginController.validate()
+
 
         mainPanel.add(panel, BorderLayout.CENTER);
     }
