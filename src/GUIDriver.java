@@ -63,7 +63,7 @@ public class GUIDriver {
 
         //We want pane visible when it has loaded login view
         main.setVisible(true);
-        
+
     }
 
 

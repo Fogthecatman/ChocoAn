@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<GridPane alignment="center" xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="controller.ServiceEntryController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="500.0">
 
-</AnchorPane>
+    <Label GridPane.rowIndex="0" text="Member ID"/>
+    <TextField GridPane.rowIndex="1" fx:id="memberIdField" />
+    <Button GridPane.rowIndex="1" GridPane.columnIndex="1" text="Validate" onAction="#validate" />
+
+    <Label GridPane.rowIndex="2" text="Service ID"/>
+    <TextField GridPane.rowIndex="3" fx:id="serviceIdField" />
+
+    <Label GridPane.rowIndex="4" text="Date"/>
+    <TextField GridPane.rowIndex="5" fx:id="dateServiceField" />
+
+
+    <Label GridPane.rowIndex="6" text="Comments" />
+    <TextArea maxWidth="500" GridPane.rowIndex="7" GridPane.columnSpan="2" wrapText="true" fx:id="commentArea" />
+
+    <HBox GridPane.columnSpan="2" GridPane.rowIndex="8" alignment="BOTTOM_RIGHT">
+        <Button GridPane.columnIndex="0" text="Cancel" onAction="#cancel" />
+        <Button GridPane.columnIndex="1" text="Submit" onAction="#submit" />
+    </HBox>
+
+</GridPane>
+

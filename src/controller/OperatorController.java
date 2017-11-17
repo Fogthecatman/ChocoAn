@@ -1,14 +1,17 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import model.User;
 
-public class OperatorController extends ViewController {
+public class OperatorController  {
 
-    public OperatorController(User login) {
-        super(login);
+    /* @TODO    Buttons (except for Service btn) will need to be added dynamically from User Permissions
+    */
+
+    public OperatorController() {
+
     }
 
-    public void run() {
-
+    public void serviceEntry(ActionEvent actionEvent) {
     }
 }
