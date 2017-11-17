@@ -21,9 +21,9 @@ public class GUIDriver {
         login = new User("Operator");
 
         controls = new ViewController[4]; //Holds references to different controllers
-        controls[0] = new LoginController(login);
-        controls[1] = new OperatorController(login);
-        controls[2] = new ServiceEntryController(login);
+        //controls[0] = new LoginController();
+        //controls[1] = new OperatorController(login);
+        //controls[2] = new ServiceEntryController(login);
 
         login = null; //@TODO This is null until a user has logged in
 
@@ -32,11 +32,16 @@ public class GUIDriver {
 
     //Deals with initializations of gui components
     private void init() {
+/*
+        MaterialLookAndFeel ui = new MaterialLookAndFeel (GUITheme.LIGHT_THEME);
 
         try {
-            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
-        } catch (Exception e) { e.printStackTrace(); }
-
+     UIManager.setLookAndFeel (ui.getName ());
+     }
+     catch (UnsupportedLookAndFeelException e) {}
+     catch (ClassNotFoundException e) {}
+     catch (InstantiationException e) {}
+     catch (IllegalAccessException e) {}*/
         main = new JFrame();
 
         main.setTitle("ChocoAn Application");
@@ -53,17 +58,13 @@ public class GUIDriver {
     public void run() {
 
         //Login Step
-        populateView(controls[2]);
-        controls[2].run();
+        //populateView(controls[0]);
+        controls[0].run();
 
         //We want pane visible when it has loaded login view
         main.setVisible(true);
         
     }
 
-    //Gets view associated with Controller and fills GUI
-    private void populateView(ViewController c) {
-        main.setContentPane(c.getView().getPanel());
-    }
 
 }

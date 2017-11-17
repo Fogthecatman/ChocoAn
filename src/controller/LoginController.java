@@ -1,23 +1,18 @@
 package controller;
 
-import model.User;
-import view.LoginView;
-import view.View;
+import javafx.event.ActionEvent;
+import javafx.scene.control.TextField;
 
 /**
  * Created by Jacob on 11/6/17.
  */
-public class LoginController extends ViewController {
+public class LoginController {
 
-    private View loginView;
+    public TextField userField;
+    public TextField passwordField;
 
-    public LoginController(User login) {
-        super(login);
-        loginView = new LoginView();
-    }
+    public LoginController() {
 
-    public View getView() {
-        return loginView;
     }
 
     //Validates id/password user enters in LoginView
@@ -44,4 +39,8 @@ public class LoginController extends ViewController {
 
     }
 
+    //@TODO regex validation for passing values
+    public void submit(ActionEvent actionEvent) {
+        validate(Integer.parseInt(userField.getText()), passwordField.getText());
+    }
 }

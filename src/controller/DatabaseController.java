@@ -101,7 +101,7 @@ public class DatabaseController {
         // This is needed cause you can't do a select inside a insert into statement
         String servFeeQuery =  getServFee(servNumber);
         /* execute the query and then save the resultset of serv fee to a double */
-        Double servFee;
+        Double servFee = 0.0;
         return String.format("insert into serv_his_tbl " +
                               "Values " +
                               "(%s, %s, %d, %d, %d, %d)",
