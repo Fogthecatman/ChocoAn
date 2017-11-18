@@ -1,7 +1,3 @@
-import controller.LoginController;
-import controller.OperatorController;
-import controller.ServiceEntryController;
-import controller.ViewController;
 import model.User;
 
 import javax.swing.*;
@@ -12,7 +8,7 @@ import java.awt.*;
  */
 public class GUIDriver {
 
-    private ViewController[] controls;
+    //private ViewController[] controls;
     private JFrame main;
     private User login;
 
@@ -20,7 +16,7 @@ public class GUIDriver {
 
         login = new User("Operator");
 
-        controls = new ViewController[4]; //Holds references to different controllers
+        //controls = new ViewController[4]; //Holds references to different controllers
         //controls[0] = new LoginController();
         //controls[1] = new OperatorController(login);
         //controls[2] = new ServiceEntryController(login);
@@ -59,7 +55,7 @@ public class GUIDriver {
 
         //Login Step
         //populateView(controls[0]);
-        controls[0].run();
+        //controls[0].run();
 
         //We want pane visible when it has loaded login view
         main.setVisible(true);

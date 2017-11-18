@@ -3,16 +3,21 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 
+import javax.swing.plaf.nimbus.State;
+import java.io.IOException;
+
 /**
  * Created by Jacob on 11/6/17.
  */
 public class LoginController {
 
+    private StateController sc;
+
     public TextField userField;
     public TextField passwordField;
 
     public LoginController() {
-
+        sc = StateController.getInstance();
     }
 
     //Validates id/password user enters in LoginView
@@ -40,7 +45,15 @@ public class LoginController {
     }
 
     //@TODO regex validation for passing values
-    public void submit(ActionEvent actionEvent) {
-        validate(Integer.parseInt(userField.getText()), passwordField.getText());
+    public void submit(ActionEvent actionEvent) throws IOException {
+        /*
+        boolean valid = validate(Integer.parseInt(userField.getText()), passwordField.getText());
+
+        if(!valid) {
+            //put up error message
+        }
+        */
+
+        sc.setView(View.OPERATOR);
     }
 }
