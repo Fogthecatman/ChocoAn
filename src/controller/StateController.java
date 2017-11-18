@@ -21,7 +21,7 @@ public class StateController {
     private static StateController sc;
 
     private Parent login, service, operator;
-    private Scene current;
+    private Scene currentScene, loginScene, serviceScene, operatorScene;
     private Stage primaryStage;
 
 
@@ -49,10 +49,15 @@ public class StateController {
             service = FXMLLoader.load(getClass().getResource("../view/service_entry.fxml"));
             operator = FXMLLoader.load(getClass().getResource("../view/operator.fxml"));
 
-            current = new Scene(login, 600, 700);
+            loginScene = new Scene(login, 600, 700);
+            serviceScene = new Scene(service, 600, 700);
+            operatorScene = new Scene(operator, 600, 700);
+
+
+            currentScene = loginScene;
 
             //Set stylesheet for current
-            current.getStylesheets().add(getClass().getResource("../view/css/app.css").toExternalForm());
+            currentScene.getStylesheets().add(getClass().getResource("../view/css/app.css").toExternalForm());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -61,7 +66,7 @@ public class StateController {
 
         //Main event
         primaryStage.setTitle("ChocoAn Login");
-        primaryStage.setScene(current);
+        primaryStage.setScene(currentScene);
         primaryStage.show();
     }
 
@@ -69,16 +74,16 @@ public class StateController {
     public void setView(View v) {
 
         if(v == View.LOGIN)
-            current = new Scene(login, 600, 700);
+            currentScene = loginScene;
         else if(v == View.SERVICE_ENTRY)
-            current = new Scene(service, 600, 700);
+            currentScene = serviceScene;
         else if(v == View.OPERATOR)
-            current = new Scene(operator, 600, 700);
+            currentScene = operatorScene;
 
         //Set stylesheet for current
-        current.getStylesheets().add(getClass().getResource("../view/css/app.css").toExternalForm());
+        currentScene.getStylesheets().add(getClass().getResource("../view/css/app.css").toExternalForm());
 
-        primaryStage.setScene(current);
+        primaryStage.setScene(currentScene);
         primaryStage.show();
     }
 
