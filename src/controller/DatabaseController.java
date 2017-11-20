@@ -141,7 +141,8 @@ public class DatabaseController {
         return String.format("select 1 from mem_tbl where mem_id = %d", memNumber);
     }
 
-    public String getChocAnProviderValidation(int proNumber)
+    //@TODO: Need to validate password
+    public String getChocAnProviderValidation(int proNumber, String proPassword)
     {
         return String.format("select 1 from prov_tbl where prov_id = %d", proNumber);
     }
