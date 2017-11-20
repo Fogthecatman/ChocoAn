@@ -27,5 +27,6 @@
         <Button GridPane.columnIndex="1" text="Submit" onAction="#submit" />
     </HBox>
 
+    <Label GridPane.rowIndex="9" fx:id="errorLabel" />
 </GridPane>
 

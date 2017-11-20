@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import javax.swing.plaf.nimbus.State;
@@ -11,6 +12,7 @@ import java.io.IOException;
  */
 public class LoginController {
 
+    public Label errorLabel;
     private StateController sc;
 
     public TextField userField;
@@ -26,7 +28,6 @@ public class LoginController {
         //See if password matches
         //set User.id
         //return true or false
-
         return true;
     }
 
@@ -55,5 +56,10 @@ public class LoginController {
         */
 
         sc.setView(View.OPERATOR);
+    }
+
+
+    private void showError(String error) {
+        errorLabel.setText(error);
     }
 }

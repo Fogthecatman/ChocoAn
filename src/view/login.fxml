@@ -20,4 +20,6 @@
         <Button text="Submit" onAction="#submit" />
     </HBox>
 
+    <Label GridPane.rowIndex="5" fx:id="errorLabel"/>
+
 </GridPane>

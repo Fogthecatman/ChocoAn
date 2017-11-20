@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import java.lang.Integer;
@@ -8,6 +9,7 @@ import model.User;
 
 public class ServiceEntryController {
 
+    public Label errorLabel;
     private StateController sc;
 
     public TextField serviceIdField;
@@ -43,4 +45,9 @@ public class ServiceEntryController {
         //query DB with service ID
         //If it exists, fine, otherwise mark as invalid
     }
+
+    private void showError(String error) {
+        errorLabel.setText(error);
+    }
+
 }
