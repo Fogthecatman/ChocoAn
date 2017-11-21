@@ -1,5 +1,7 @@
 package model;
 
-public interface Report {
+import java.sql.ResultSet;
 
+public interface Report {
+    String format(ResultSet rs);
 }

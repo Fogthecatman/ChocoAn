@@ -1,5 +1,7 @@
 package controller;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -16,11 +18,18 @@ public class LoginController {
     private StateController sc;
 
     public TextField userField;
-    public TextField passwordField;
 
     public LoginController() {
         sc = StateController.getInstance();
+        userField = new TextField();
+        init();
     }
+
+
+    private void init() {
+
+    }
+
 
     //Validates id/password user enters in LoginView
     public boolean validate(int id, String password){

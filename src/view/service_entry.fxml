@@ -10,10 +10,11 @@
 
     <Label GridPane.rowIndex="0" text="Member ID"/>
     <TextField GridPane.rowIndex="1" fx:id="memberIdField" />
-    <Button GridPane.rowIndex="1" GridPane.columnIndex="1" text="Validate" onAction="#validate" />
+    <Button GridPane.rowIndex="1" GridPane.columnIndex="1" text="Validate" onAction="#validateMemberID" />
 
-    <Label GridPane.rowIndex="2" text="Service ID"/>
+    <Label GridPane.rowIndex="2" text="Service Code"/>
     <TextField GridPane.rowIndex="3" fx:id="serviceIdField" />
+    <Button GridPane.rowIndex="3" GridPane.columnIndex="1" text="Validate" onAction="#validateServiceCode" />
 
     <Label GridPane.rowIndex="4" text="Date"/>
     <TextField GridPane.rowIndex="5" fx:id="dateServiceField" />

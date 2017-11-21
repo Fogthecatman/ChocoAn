@@ -1,8 +1,6 @@
+import controller.DatabaseController;
 import controller.StateController;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
@@ -20,7 +18,11 @@ public class Driver extends Application{
 
 
     public static void main(String args[]){
-        launch(args);
+
+        //launch(args);
+
+        DatabaseController db = new DatabaseController();
+        db.executeSql(db.getChocAnMemberValidation(1000000));
     }
 
 }

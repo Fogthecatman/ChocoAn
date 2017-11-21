@@ -13,9 +13,6 @@
     <Label GridPane.rowIndex="0" text="User" />
     <TextField GridPane.rowIndex="1" fx:id="userField" />
 
-    <Label GridPane.rowIndex="2" text="Password" />
-    <TextField GridPane.rowIndex="3" fx:id="passwordField" />
-
     <HBox GridPane.rowIndex="4" alignment="BOTTOM_RIGHT">
         <Button text="Submit" onAction="#submit" />
     </HBox>

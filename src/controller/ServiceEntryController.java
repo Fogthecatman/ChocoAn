@@ -38,16 +38,19 @@ public class ServiceEntryController {
         sc.setView(View.OPERATOR);
     }
 
-    public void validate(ActionEvent actionEvent) {
+    private void showError(String error) {
+        errorLabel.setText(error);
+    }
+
+    public void validateMemberID(ActionEvent actionEvent) {
+
+    }
+
+    public void validateServiceCode(ActionEvent actionEvent) {
         //Validates Service Code
         int serviceID = Integer.parseInt(serviceIdField.getText());
 
         //query DB with service ID
         //If it exists, fine, otherwise mark as invalid
     }
-
-    private void showError(String error) {
-        errorLabel.setText(error);
-    }
-
 }
