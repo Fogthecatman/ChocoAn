@@ -1,8 +1,11 @@
 package controller;
 
 import java.lang.String;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Date;
-import java.sql.*;
 
 /**
  * Created by Ben on 11/14/17.
@@ -13,12 +16,19 @@ public class DatabaseController {
     {
         try
         {
+            //@TODO Jacob - I believe the problem it is having is from the computer not having JDBC drivers
+            //I will check this when I get back to school
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
             // create our mysql database connection
             String hostName = "chocanbbj.database.windows.net";
             String dbName = "chocanbbj";
-            String user = "super";
+            String user = "super@chocanbbj";
             String password = "bbjadmin=1";
-            String url = String.format("jdbc:sqlserver://chocanbbj.database.windows.net:1433;database=chocanbbj;user=super;password=bbjadmin=1;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+
+            String url = String.format("jdbc:sqlserver://%s:1433;database=%s;user=%s;password=%s;encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;", hostName, dbName, user, password);
+
+            //String url = "jdbc:sqlserver://chocanbbj.database.windows.net:1433;databaseName=chocanbbj;user=super;password=bbjadmin=1;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
             Connection conn = DriverManager.getConnection(url);
 
             // create the java statement
